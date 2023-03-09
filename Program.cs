@@ -7,12 +7,12 @@ Console.WriteLine("Для проверки является ли число па
 int number = Convert.ToInt32(Console.ReadLine());
 bool ControlFiveNumbers(int number)
 {
-    if (number >= 99999 && number < 10000)
+    if (number <= 99999 || number > 10000)
     {
-        Console.WriteLine("Ошибка! Введено не пятизначное число!");
-        return false;
+                return true;
     }
-    return true;
+    Console.WriteLine("Ошибка! Введено не пятизначное число!");
+    return false;
 }
 int n1 = number / 10000;
 int n2 = number / 1000 % 10;
